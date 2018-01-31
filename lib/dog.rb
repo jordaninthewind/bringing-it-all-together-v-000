@@ -12,9 +12,11 @@ attr_reader :id
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS dogs (
         id INTEGER PRIMARY KEY,
-        name VARCHAR(25)
+        name VARCHAR(25),
         breed VARCHAR(25)
       )
     SQL
+
+    DB[:conn].execute(sql)
 
 end

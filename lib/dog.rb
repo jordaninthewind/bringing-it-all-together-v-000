@@ -8,4 +8,13 @@ attr_reader :id
     @breed = breed
   end
 
+  def self.create_table
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXISTS dogs (
+        id INTEGER PRIMARY KEY,
+        name VARCHAR(25)
+        breed VARCHAR(25)
+      )
+    SQL
+
 end

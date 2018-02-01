@@ -63,8 +63,8 @@ attr_reader :id
     self.new(dog_hash)
   end
 
-  def self.find_or_create_by(name:, breed:)
-    dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, album).flatten
+  def self.find_or_create_by(name, breed)
+    dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed).flatten
     binding.pry
     if !dog.empty?
       dog_hash = {id: dog[0], name: dog[1], breed: dog[2]}

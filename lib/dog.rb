@@ -35,6 +35,13 @@ attr_reader :id
     return self
   end
 
+  def update
+    sql = <<-SQL
+      UPDATE dogs SET name = ?, breed = ? WHERE id = ?;
+    SQL
+
+
+
   def self.create(dog_hash)
     dog = self.new(dog_hash)
     dog.save

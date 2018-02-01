@@ -32,7 +32,7 @@ attr_reader :id
 
     DB[:conn].execute(sql, self.name, self.breed)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs").flatten[0]
-    self
+    return self
   end
 
   def self.create(dog_hash)

@@ -55,4 +55,11 @@ attr_reader :id
     dog_hash = {id: result[0], name: result[1], breed: result[2]}
     self.new(dog_hash)
   end
+
+  def self.find_by_name(name)
+    sql = "SELECT * FROM dogs WHERE name = ?"
+    result = DB[:conn].execute(sql, name)[0]
+    dog_hash = {id: result[0], name: result[1], breed: result[2]}
+    self.new(dog_hash)
+  end
 end

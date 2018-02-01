@@ -45,7 +45,6 @@ attr_reader :id
     sql = "SELECT * FROM dogs WHERE id = ?"
     result = DB[:conn].execute(sql, id)[0]
     dog_hash = {id: result[0], name: result[1], breed: result[2]}
-    binding.pry
-    self.new()
+    self.new(dog_hash)
   end
 end

@@ -40,8 +40,8 @@ attr_reader :id
       UPDATE dogs SET name = ?, breed = ? WHERE id = ?;
     SQL
 
-  DB[:conn].execute(sql, self.name, self.breed, self.id)
-end
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
+  end
 
   def self.create(dog_hash)
     dog = self.new(dog_hash)

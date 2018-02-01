@@ -70,7 +70,6 @@ attr_reader :id
       dog = Dog.new(dog_hash)
     else
       dog = self.create({name: name, breed: breed})
-      binding.pry
     end
     dog
   end

@@ -36,6 +36,6 @@ attr_reader :id
   end
 
   def self.create(dog_hash)
-    binding.pry
+    self.new(dog_hash)
   end
 end

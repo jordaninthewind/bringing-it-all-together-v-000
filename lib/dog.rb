@@ -66,7 +66,7 @@ attr_reader :id
   def self.find_or_create_by(name:, breed:)
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, album).flatten
     if !dog.empty?
-      dog_hash = {id: result[0], name: result[1], breed: result[2]}
+      dog_hash = {id: dog[0], name: dog[1], breed: dog[2]}
       dog = Dog.new(dog_data[0], song_data[1], song_data[2])
     else
       song = self.create(name: name, album: album)

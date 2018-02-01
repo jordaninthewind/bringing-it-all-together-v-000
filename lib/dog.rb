@@ -68,7 +68,7 @@ attr_reader :id
     binding.pry
     if !dog.empty?
       dog_hash = {id: dog[0], name: dog[1], breed: dog[2]}
-      dog = Dog.new(dog_data[0], song_data[1], song_data[2])
+      dog = Dog.new(dog_hash)
     else
       song = self.create(name: name, album: album)
     end

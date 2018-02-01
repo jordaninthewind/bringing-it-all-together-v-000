@@ -39,6 +39,5 @@ attr_reader :id
     dog = self.new(dog_hash)
     dog.save
     dog
-
   end
 end

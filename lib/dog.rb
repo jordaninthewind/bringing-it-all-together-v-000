@@ -5,7 +5,7 @@ attr_reader :id
   def initialize(hash, id = nil)
     @name = hash[:name]
     @breed = hash[:breed]
-    @id = id
+    @id = hash[:id]
   end
 
   def self.create_table

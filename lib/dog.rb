@@ -62,4 +62,12 @@ attr_reader :id
     dog_hash = {id: result[0], name: result[1], breed: result[2]}
     self.new(dog_hash)
   end
+
+  def self.find_or_create_by
+
+  end
+
+  def self.new_from_db
+
+  end
 end

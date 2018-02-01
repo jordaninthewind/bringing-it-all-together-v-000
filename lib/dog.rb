@@ -44,6 +44,7 @@ attr_reader :id
   def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ?"
     result = DB[:conn].execute(sql, id)[0]
-    self.new(result[0], result[1], result[2])
+    binding.pry
+    self.new()
   end
 end

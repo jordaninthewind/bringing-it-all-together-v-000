@@ -70,7 +70,7 @@ attr_reader :id
       dog_hash = {id: dog[0], name: dog[1], breed: dog[2]}
       dog = Dog.new(dog_hash)
     else
-      song = self.create(name: name, album: album)
+      dog = self.create(name: name, album: album)
     end
     song
   end
